@@ -1,6 +1,7 @@
 import {Header} from './components';
 import { Content } from './components';
 import { Footer } from './components';
+import { Home } from './pages/Home/Home';
 import './App.css'
 
 const App = () => {
@@ -8,8 +9,7 @@ const App = () => {
     <>
       <Header />
       <Content>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam cum enim necessitatibus eos. Nesciunt quis, deleniti eos molestiae impedit excepturi sunt voluptates quam doloremque facilis molestias hic quas, dolore odit.</p>
-        <p>conteudo 2</p>
+        <Home />
       </Content>
       <Footer creatorName="leowbk77" />
     </>

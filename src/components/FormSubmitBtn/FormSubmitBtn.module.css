@@ -1,0 +1,14 @@
+.FormSubmitBtn {
+    background: var(--verde);
+    border: 1px solid var(--preto);
+    padding: .25rem .75rem;
+    color: var(--cinza);
+}
+
+.FormSubmitBtn[typeBtn="primary"] {
+    background: var(--verde);
+}
+
+.FormSubmitBtn[typeBtn="secondary"] {
+    background: var(--rosa);
+}
