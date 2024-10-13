@@ -1,14 +1,14 @@
-import {Header, Content, Footer} from '../../components';
 import { Outlet } from 'react-router-dom';
+import {Header, Content, Footer} from '../../components';
 
 const DefaultLayout = () => {
     return (
     <>
         <Header />
-        <Content>
+        <Content >
             <Outlet />
         </Content>
-        <Footer creatorName="leowbk77" />
+        <Footer />
     </>
     );
 };

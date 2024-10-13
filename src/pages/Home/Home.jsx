@@ -3,6 +3,7 @@ import { CreateTaskForm } from '../../components';
 import { TaskList } from '../../components';
 
 const Home = () => {
+
     return (
         <div className={style.Home}>
             <CreateTaskForm />

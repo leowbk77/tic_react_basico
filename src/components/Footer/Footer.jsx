@@ -1,7 +1,8 @@
+import { useAppContext } from '../../hooks';
 import style from './Footer.module.css';
 
-const Footer = (props) => {
-    const {creatorName} = props;
+const Footer = () => {
+    const {creatorName} = useAppContext();
     const ano = new Date().getFullYear();
     return (
         <footer className={style.Footer}>

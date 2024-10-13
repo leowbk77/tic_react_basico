@@ -5,6 +5,10 @@
     color: var(--cinza);
 }
 
+.FormSubmitBtn:hover {
+    cursor: pointer;
+}
+
 .FormSubmitBtn[typeBtn="primary"] {
     background: var(--verde);
 }

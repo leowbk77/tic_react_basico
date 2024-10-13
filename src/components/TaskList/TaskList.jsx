@@ -1,17 +1,17 @@
-import style from './TaskList.module.css';
 import { TaskListItem } from './TaskListItem/TaskListItem';
+import { useAppContext } from '../../hooks';
+import style from './TaskList.module.css';
 
 const TaskList = () => {
-    const tarefas = [
-        {id: 1, itemText: 'item1'},
-        {id: 2, itemText: 'item2'},
-        {id: 3, itemText: 'item3'},
-    ];
+    const {tasks} = useAppContext();
 
     return (
         <ul className={style.TaskList}>
             {
-                tarefas.map((tarefa) => <TaskListItem key={tarefa.id} itemText={tarefa.itemText}/>)
+                !tasks.length && (<p>No tasks added!</p>)
+            }
+            {
+                tasks.map((task) => <TaskListItem key={task.id} id={task.id} itemText={task.itemText} />)
             }
         </ul>
     );
