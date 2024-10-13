@@ -19,10 +19,10 @@ const TaskListItem = (props) => {
 
     const leaveInput = (event) => {
         setEditing(!editing);
-        console.log(newItemTextValue);
         updateTask(id, event.currentTarget.value);
     }
 
+    // https://react.dev/learn/responding-to-events
     return (
         <li className={style.TaskListItem} onDoubleClick={clicked}>
             {
