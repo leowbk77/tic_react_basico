@@ -12,7 +12,7 @@ const TaskList = () => {
                 !tasks.length && (<p>No tasks added!</p>)
             }
             {
-                tasks.map((task) => <TaskListItem key={task.id} id={task.id} itemText={task.itemText} />)
+                tasks.map((task) => <TaskListItem key={task.id} id={task.id} itemText={task.nome} />)
             }
         </ul>
     );
