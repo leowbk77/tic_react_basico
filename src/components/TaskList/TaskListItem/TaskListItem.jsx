@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useAppContext } from "../../../hooks";
-import { BTN_TYPE, FormSubmitBtn, FormTextField } from "../../../components";
+import { BTN_TYPE, FormSubmitBtn, FormTextField, LoadingIcon } from "../../../components";
 import style from './TaskListItem.module.css';
 
 const TaskListItem = (props) => {
     const {id, itemText} = props;
-    const {removeTask, updateTask} = useAppContext();
+    const {removeTask, updateTask, isRemovingTask, isUpdatingTask} = useAppContext();
     const [editing, setEditing] = useState(false);
     const [newItemTextValue, setNewItemTextValue] = useState(itemText);
 
@@ -31,6 +31,12 @@ const TaskListItem = (props) => {
                 : itemText
             }
             <FormSubmitBtn textBtn="-" typeBtn={BTN_TYPE.SECONDARY} onClick={() => removeTask(id)}/>
+            {
+                isRemovingTask && (<LoadingIcon />)
+            }
+            {
+                isUpdatingTask && (<LoadingIcon />)
+            }
         </li>
     );
 };

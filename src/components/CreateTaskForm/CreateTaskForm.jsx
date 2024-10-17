@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { FormTextField, FormSubmitBtn } from "../../components";
+import { FormTextField, FormSubmitBtn, LoadingIcon } from "../../components";
 import { useAppContext } from "../../hooks";
 import style from "./CreateTaskForm.module.css";
 
 const CreateTaskForm = () => {
-    const {addTask} = useAppContext();
+    const {addTask, isAddingTask} = useAppContext();
     const [taskName, setTaskName] = useState('');
 
     const onChangeSetTaskName = (event) => {
@@ -24,6 +24,7 @@ const CreateTaskForm = () => {
         <form className={style.CreateTaskForm} onSubmit={submitNewTask}>
             <FormTextField value={taskName} onChange={onChangeSetTaskName}/>
             <FormSubmitBtn textBtn="+" />
+            {isAddingTask && <LoadingIcon />}
         </form>
     );
 };

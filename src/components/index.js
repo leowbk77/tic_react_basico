@@ -5,3 +5,4 @@ export * from './CreateTaskForm';
 export * from './FormTextField';
 export * from './FormSubmitBtn';
 export * from './TaskList';
+export * from './LoadingIcon';
