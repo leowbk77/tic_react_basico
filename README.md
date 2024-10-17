@@ -2,6 +2,7 @@
 Aplicação de lista de tarefas usando react no estudo feito na trilha de react básico do [TIC em trilhas](https://ticemtrilhas.org.br/).
 
 Utiliza uma API REST como [esta](https://github.com/leowbk77/tic_todo_backend) para gerenciamento do conteúdo.
+
 ---
 
 # React + Vite
